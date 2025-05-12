@@ -1,0 +1,59 @@
+@use "helpers" as *;
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    color: inherit;
+    font-weight: 700;
+
+    @include hover {
+        color: var(--color-accent);
+    }
+
+    &[class] {
+        text-decoration: none;
+    }
+    
+    &.is-active {
+        color: var(--color-accent);
+    }
+}
+
+:focus-visible {
+    outline: rem(2) dashed var(--color-accent);
+    outline-offset: rem(4);
+    transition-duration: 0s !important;
+}
+
+main {
+    flex-grow: 1;
+}
+
+body {
+    @include fluid-text(16, 14);
+
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-base);
+    letter-spacing: 0%;
+    color: var(--color-dark);
+    background-color: var(--background-color);
+}
+
+html {
+    &.is-lock {
+        overflow: hidden;
+        
+        body {
+            background-color: #222222;
+        }
+    }
+}

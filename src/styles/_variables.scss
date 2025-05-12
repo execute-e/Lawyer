@@ -1,0 +1,20 @@
+@use 'helpers' as *;
+
+:root {
+    --color-light: #FFFFFF;
+
+    --color-accent: #4F8FF0;
+    --color-dark: #222222;
+    --background-color-dark: #010101;
+    --background-color: #F7F7F7;
+
+    --button-border: #{rem(1)} solid var(--color-accent);
+    --shadow: 0 0 0 rem(1) var(--color-dark);
+
+    --font-family-base: 'Nunito Sans', sans-serif;
+
+    --container-width: #{rem(1319)};
+    --container-padding-x: #{rem(24)};
+
+    --transition-duration: 0.2s;
+}

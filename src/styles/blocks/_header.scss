@@ -1,0 +1,115 @@
+@use '../helpers' as *;
+
+.header {
+    background-color: rgba(1, 1, 1, 0.76);
+
+    &__extra {
+        background-color: var(--background-color-dark);
+
+        @include mobile-l {
+            display: none;
+        }
+
+        &-inner {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-block: rem(16);
+            color: var(--color-light);
+        }
+
+        &-overlay {
+            display: flex;
+            align-items: center;
+            column-gap: rem(24);
+        }
+
+        &-link {
+            color: var(--color-accent);
+
+            @include hover {
+                color: var(--color-light);
+            }
+        }
+    }
+
+    &__phone {
+        display: flex;
+        column-gap: rem(8);
+    }
+
+    &__mail {
+        display: flex;
+        column-gap: rem(8);
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: rem(24);
+        color: var(--color-light);
+        position: relative;
+        z-index: 200;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: rem(32);
+    }
+
+    &__burger-button {
+        @include tablet-above {
+            display: none !important;
+        }
+    }
+
+    &__overlay {
+        @include tablet-above {
+            display: contents;
+        }
+
+        @include tablet {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            inset: 0;
+            padding: 1rem;
+            background-color: #222222;
+            transition-duration: var(--transition-duration);
+            z-index: 100;
+
+            .header__list {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                row-gap: rem(24);
+                padding-top: rem(50);
+            }
+
+            .header__navigation {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            &:not(.is-active) {
+                @include hide;
+
+                translate: 100%;
+            }
+        }
+    }
+
+    &__image {
+        width: rem(300);
+        height: rem(72);
+
+        @include tablet {
+            width: rem(217);
+            height: rem(47);
+        }
+    }
+}
