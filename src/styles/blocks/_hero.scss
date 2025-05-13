@@ -1,0 +1,40 @@
+@use '../helpers' as *;
+
+.hero {
+    &__inner {
+        padding-block: rem(150);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(8);
+        align-items: center;
+        color: var(--color-light);
+        text-align: center;
+
+        @include tablet {
+            padding-block: rem(66);
+        }
+
+        @include mobile-l {
+            padding-block: rem(60);
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(8);
+    }
+
+    &__button {
+        margin-top: rem(40);
+
+        @include tablet {
+            margin-top: rem(38);
+        }
+
+        @include mobile-l {
+            margin-top: rem(24);
+        }
+    }
+}

@@ -25,4 +25,56 @@
 .bg {
     background: url(../../UI/images/bg.png) no-repeat;
     background-size: cover;
+
+    @include tablet {
+        background-position: center;
+    }
+}
+
+.fw300 {
+    font-weight: 300 !important;
+}
+
+.fw600 {
+    font-weight: 600 !important;
+}
+
+.fsize20-18-16 {
+    font-size: rem(20) !important;
+
+    @include tablet {
+        font-size: rem(18) !important;
+    }
+
+    @include mobile-l {
+        font-size: rem(16) !important;
+    }
+}
+
+.fsize30-24-18 {
+    font-size: rem(30) !important;
+
+    @include tablet {
+        font-size: rem(24) !important;
+    }
+
+    @include mobile-l {
+        font-size: rem(18) !important;
+    }
+}
+
+.fsize56-50-30 {
+    font-size: rem(56) !important;
+
+    @include tablet {
+        font-size: rem(50) !important;
+    }
+
+    @include mobile-l {
+        font-size: rem(30) !important;
+    }
+}
+
+.color-accent {
+    color: var(--color-accent);
 }

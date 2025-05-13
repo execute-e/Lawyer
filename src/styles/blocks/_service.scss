@@ -1,0 +1,40 @@
+@use '../helpers' as *;
+
+.service {
+    background-color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: rem(15);
+    height: 100%;
+    padding: rem(50) rem(32);
+    box-sizing: border-box;
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+        background-color: var(--color-accent);
+        color: var(--color-light);
+
+        .service__icon {
+            fill: var(--color-light);
+        }
+    }
+
+    @include mobile-l {
+        padding-block: rem(25) rem(25);
+    }
+
+    &__icon {
+        fill: var(--color-accent);
+
+        svg {
+            fill: inherit;
+            
+            path {
+                fill: inherit;
+            }
+        }
+    }
+}

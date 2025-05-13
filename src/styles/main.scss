@@ -4,5 +4,13 @@
 @use 'variables';
 @use 'utils';
 
+@use 'blocks/section';
 @use 'blocks/header';
 @use 'blocks/burger-button';
+@use 'blocks/btn';
+@use 'blocks/hero';
+@use 'blocks/services';
+@use 'blocks/service';
+@use 'blocks/info';
+@use 'blocks/lawyers';
+@use 'blocks/lawyer';

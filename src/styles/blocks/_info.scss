@@ -1,0 +1,42 @@
+@use '../helpers' as *;
+
+.info {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(35);
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(16);
+    }
+
+    &__buttons {
+        display: flex;
+        column-gap: rem(24);
+
+        @include mobile-l {
+            flex-direction: column;
+            align-self: center;
+            align-items: center;
+            row-gap: rem(24);
+        }
+    }
+
+    &__image {
+        width: rem(535);
+        height: rem(359);
+
+        @include tablet {
+            display: none;
+        }
+    }
+}

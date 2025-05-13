@@ -1,0 +1,28 @@
+@use '../helpers' as *;
+
+.section {
+    padding-block: rem(80);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(48);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(37);
+        text-align: center;
+    }
+
+    @include tablet {
+        padding-block: rem(60);
+    }
+
+    @include mobile-l {
+        padding-block: rem(40);
+    }
+}

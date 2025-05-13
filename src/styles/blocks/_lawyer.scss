@@ -1,0 +1,41 @@
+@use '../helpers' as *;
+
+.lawyer {
+    box-shadow: rem(2) rem(2) rem(12) rem(0.5) rgba(1, 1, 1, 0.12);
+
+    &__card {
+        @include mobile-s {
+            width: rem(212);
+        }
+    }
+
+    &__image {
+        width: rem(312);
+        height: rem(320);
+
+        @include mobile-s {
+            width: rem(212);
+            height: rem(220);
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: rem(24) rem(16);
+        row-gap: rem(10);
+    }
+
+    &__name {
+        font-size: rem(16);
+        font-weight: 700;
+    }
+
+    &__specialization {
+        font-size: rem(14);
+        font-weight: 300;
+        text-transform: lowercase;
+    }
+}

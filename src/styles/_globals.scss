@@ -28,7 +28,7 @@ a {
 }
 
 :focus-visible {
-    outline: rem(2) dashed var(--color-accent);
+    outline: rem(2) dashed var(--color-light);
     outline-offset: rem(4);
     transition-duration: 0s !important;
 }
@@ -43,7 +43,8 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--font-family-base);
-    letter-spacing: 0%;
+    letter-spacing: 0;
+    line-height: 1.2;
     color: var(--color-dark);
     background-color: var(--background-color);
 }
@@ -55,5 +56,21 @@ html {
         body {
             background-color: #222222;
         }
+    }
+}
+
+main {
+    > *:not(:first-child) {
+        background: var(--color-light);
+    }
+}
+
+h2, .h2 {
+    font-size: rem(28);
+    font-weight: 800;
+    text-transform: uppercase;
+
+    @include mobile-m {
+        font-size: rem(20);
     }
 }

@@ -1,0 +1,21 @@
+@use '../helpers' as *;
+
+.btn {
+    border: rem(1) solid var(--color-accent);
+    background-color: var(--color-accent);
+    padding: rem(16) rem(24);
+    font-size: rem(14);
+    font-weight: 900;
+    color: var(--color-light);
+    text-transform: uppercase;
+
+    @include hover {
+        background-color: transparent;
+    }
+
+    &--gray {
+        background-color: var(--background-color);
+        color: var(--color-dark);
+        border: rem(1) solid var(--background-color);
+    }
+}

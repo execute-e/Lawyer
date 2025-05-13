@@ -1,0 +1,35 @@
+@use '../helpers' as *;
+
+.services {
+    background-color: var(--background-color) !important;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: rem(37);
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(48);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        gap: rem(38);
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile-l {
+            grid-template-columns: 1fr;
+        }
+    }
+}
