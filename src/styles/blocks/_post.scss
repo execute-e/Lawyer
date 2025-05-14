@@ -1,0 +1,56 @@
+@use '../helpers' as *;
+
+.post {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(24);
+    height: 100%;
+
+    @include hover {
+        transition-duration: var(--transition-duration);
+
+        .post__image {
+            opacity: 0.7;
+        }
+
+        .post__title {
+            color: var(--color-accent);
+        }
+    }
+
+    @include laptop {
+        align-items: start;
+        text-align: center;
+    }
+
+    @include tablet {
+        background-color: var(--background-color);
+        padding: rem(24);
+    }
+    
+    &__image {
+        width: rem(424);
+        height: rem(270);
+
+        @include mobile-l {
+            width: rem(224);
+            height: rem(170);
+        }
+
+        &-link {
+            @include laptop {
+                align-self: center;
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(16);
+    }
+
+    &__link {
+        align-self: center;
+    }
+}

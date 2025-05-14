@@ -1,0 +1,48 @@
+@use '../helpers' as *;
+
+.posts {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(48);
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(48);
+    }
+
+    &__button {
+        display: flex;
+        align-self: center;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        column-gap: rem(24);
+
+        @include laptop {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            row-gap: rem(24);
+        }
+    }
+
+    &__item {
+        &:last-child {
+            @include laptop {
+                display: none;
+            }
+
+            @include tablet {
+                display: flex;
+            }
+        }
+    }
+}

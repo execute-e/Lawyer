@@ -1,0 +1,45 @@
+@use '../helpers' as *;
+
+.reviews {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(48);
+
+        @include mobile-l {
+            row-gap: rem(24);
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(32);
+
+        @include mobile-l {
+            row-gap: 0;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 1fr;
+        column-gap: rem(24);
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            row-gap: rem(24);
+        }
+    }
+
+    
+    &__buttons {
+        display: flex;
+        column-gap: rem(24);
+
+        @include mobile-m {
+            column-gap: rem(12);
+        }
+    }
+}

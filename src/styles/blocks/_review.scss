@@ -1,0 +1,38 @@
+@use '../helpers' as *;
+
+.review {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+    padding: rem(32);
+    box-shadow: rem(2) rem(2) rem(12) rem(0.5) rgba(1, 1, 1, 0.12);
+    height: 100%;
+
+    @include mobile-m {
+        height: auto;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__person {
+        display: flex;
+        column-gap: rem(24);
+        align-items: center;
+    }
+
+    &__author {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(4);
+    }
+
+    &__decoration {
+        @include mobile-m {
+            display: none;
+        }
+    }
+}

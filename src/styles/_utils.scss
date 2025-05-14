@@ -25,9 +25,11 @@
 .bg {
     background: url(../../UI/images/bg.png) no-repeat;
     background-size: cover;
+    background-position: bottom;
 
-    @include tablet {
-        background-position: center;
+    @include laptop {
+        background-size: auto;
+        background-position: 0 0;
     }
 }
 
