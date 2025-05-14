@@ -24,6 +24,7 @@ a {
     
     &.is-active {
         color: var(--color-accent);
+        pointer-events: none;
     }
 }
 

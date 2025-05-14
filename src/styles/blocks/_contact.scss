@@ -1,0 +1,32 @@
+@use '../helpers' as *;
+
+.contact {
+    display: flex;
+    column-gap: rem(24);
+    align-items: center;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: rem(12);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #8C8C8C;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+    }
+
+    &__icon {
+        padding: rem(12);
+        background-color: #2C2C2C;
+        flex-shrink: 0;
+        width: rem(32);
+        height: rem(32);
+        box-sizing: content-box;
+    }
+}

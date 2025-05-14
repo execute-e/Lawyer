@@ -1,0 +1,80 @@
+@use '../helpers' as *;
+
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding-bottom: 0;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(48);
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: rem(48);
+        border-bottom: rem(1) solid #8C8C8C;
+
+        @include mobile-l {
+            justify-content: center;
+
+        }
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        width: rem(276);
+        height: rem(62);
+
+        @include mobile-l {
+            margin-left: rem(40);
+        }
+    }
+
+    &__paragraph {
+        text-transform: lowercase;
+
+        @include mobile-l {
+            display: none;
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: rem(80);
+
+        @include mobile-l {
+            flex-direction: column;
+            row-gap: rem(40);
+            align-items: center;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(20);
+    }
+
+    &__navigation {
+        text-align: center;
+    }
+
+    &__link {
+        text-transform: uppercase;
+    }
+
+    &__extra {
+        background-color: #181818;
+
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            padding-block: rem(16);
+        }
+    }
+}

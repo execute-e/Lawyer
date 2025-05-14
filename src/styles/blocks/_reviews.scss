@@ -17,7 +17,7 @@
         row-gap: rem(32);
 
         @include mobile-l {
-            row-gap: 0;
+            row-gap: rem(16);
         }
     }
 

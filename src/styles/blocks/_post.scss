@@ -7,8 +7,6 @@
     height: 100%;
 
     @include hover {
-        transition-duration: var(--transition-duration);
-
         .post__image {
             opacity: 0.7;
         }
@@ -29,6 +27,7 @@
     }
     
     &__image {
+        transition-duration: var(--transition-duration);
         width: rem(424);
         height: rem(270);
 
@@ -45,6 +44,7 @@
     }
 
     &__text {
+        transition-duration: var(--transition-duration);
         display: flex;
         flex-direction: column;
         row-gap: rem(16);
